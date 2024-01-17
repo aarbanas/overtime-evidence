@@ -35,10 +35,8 @@ getLogs(startDate, endDate)
         let totalOvertimeHours = 0
         for (const timeLog of result.timeEntries) {
             if (timeLog.tags.length) {
-                timeLog.tags.forEach(({ name }) => {
-                    if (name === 'overtime')
-                        totalOvertimeHours += timeLog.hoursDecimal
-                })
+                if (timeLog.tags.findIndex(({ name }) => name === 'overtime') > -1)
+                    totalOvertimeHours += timeLog.hoursDecimal
             }
         }
 
