@@ -2,10 +2,17 @@
 
 Simple Node script for calculating overtime hours logged in specified period in Teamwork
 
+## Prerequisites
+You must have a running node version locally. Run the next command to check if you have a running node version.
+```bash
+$ node --version
+```
+
 ## Usage
 Just follow the next steps.
 1. Prepare teamwork [API key](https://apidocs.teamwork.com/docs/teamwork/df5a63302d729-getting-started-with-the-teamwork-com-api). 
 2. Fill necessary environment variables
+   1. For the `USER_ID` pick it from any request in teamwork.
 3. Install dependencies 
 ``` shell
 $ npm install
